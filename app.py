@@ -468,11 +468,10 @@ def setupSQLConn():
 
 def getConn():
     # Local
-    # mydb = conn.connect(host='localhost', user='root', passwd='MySql@123')
+    mydb = conn.connect(host='localhost', user='root', passwd='mysql')
 
     # AWS
-    mydb = conn.connect(host='ineurondatabase.caxhx34dldru.us-east-1.rds.amazonaws.com', user='admin',
-                        passwd='mysql1234')
+    #mydb = conn.connect(host='ineurondatabase.caxhx34dldru.us-east-1.rds.amazonaws.com', user='admin',passwd='mysql1234')
     return mydb
 
 
@@ -614,5 +613,5 @@ def loadFacultyTable(faculty):
 
 
 if __name__ == "__main__":
-    # app.run(host='127.0.0.1', port=8001, debug=True)
-    app.run()
+    app.run(host='127.0.0.1', port=8001, debug=True)
+    #app.run()
